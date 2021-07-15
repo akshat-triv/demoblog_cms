@@ -1,0 +1,26 @@
+@include header;
+@include footer;
+main {
+  width: 90%;
+  display: flex;
+  margin: 4rem auto;
+
+  @include respond(tab-port) {
+    width: 80%;
+  }
+}
+
+.article {
+  margin-top: 2rem;
+}
+
+.preview {
+  border: 2px solid #333;
+  flex: 1;
+  padding: 1rem;
+}
+
+.cms {
+  flex: 0 0 45%;
+  margin-right: 5rem;
+}

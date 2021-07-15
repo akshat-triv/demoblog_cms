@@ -1,0 +1,329 @@
+@mixin respond($break-point) {
+  @if ($break-point== "phone") {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if ($break-point== "tab-port") {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if ($break-point== "1000") {
+    @media only screen and (max-width: 62.5em) {
+      @content;
+    }
+  }
+  @if ($break-point== "tab-land") {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if ($break-point== "pc") {
+    @media only screen and (min-width: 87.5em) {
+      @content;
+    }
+  }
+  @if ($break-point== "big") {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+
+@mixin header {
+  .header {
+    width: 100%;
+    height: 8rem;
+    padding: 4rem 2rem;
+    background-color: var(--Light-grey-1);
+    display: flex;
+    align-items: stretch;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+
+    @include respond("1000") {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding: 2rem 2rem;
+      height: 14rem;
+    }
+
+    &__icon {
+      align-self: center;
+      margin-right: auto;
+      font-weight: 400;
+      font-size: 3rem;
+      display: inline-block;
+      //transition: all 0.2s;
+      background-image: linear-gradient(to right bottom, #25ccf7, #3b3b98);
+      color: transparent;
+      -webkit-background-clip: text;
+
+      &::after {
+        content: "";
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+        //background-image: url(./../svg/SVG/chevron-thin-right.svg);
+        background-color: var(--Primary-color);
+        -webkit-mask-image: url(./../svg/SVG/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+      }
+
+      &::before {
+        content: " ";
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        // background-image: url(./../svg/SVG/chevron-thin-left.svg);
+        background-color: var(--Primary-color);
+        -webkit-mask-image: url(./../svg/SVG/chevron-thin-left.svg);
+        -webkit-mask-size: cover;
+      }
+    }
+  }
+  .search {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    margin-right: 2rem;
+
+    @include respond(tab-port) {
+      width: 43%;
+      margin-right: unset;
+    }
+
+    &__bar {
+      height: 4rem;
+      width: 100%;
+      font-size: 1.6rem;
+      color: #555;
+      border: none;
+      outline: none;
+      padding: 0 2rem;
+      background-color: var(--Light-grey-3);
+      border-radius: 5px;
+
+      &::-webkit-input-placeholder {
+        color: var(--Dark-grey-2);
+      }
+
+      @include respond("1000") {
+        font-size: 2rem;
+      }
+    }
+
+    &__button {
+      height: 2.5rem;
+      width: 2.5rem;
+      transform: translateX(-3rem);
+      border: none;
+      outline: none;
+      background-color: var(--Light-grey-3);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__icon {
+      height: 100%;
+      width: 100%;
+      fill: var(--Light-grey-4);
+    }
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+
+    @include respond("1000") {
+      align-self: center;
+    }
+
+    @include respond(phone) {
+      overflow-x: scroll;
+    }
+
+    &__item {
+      padding: 3rem 0;
+      transition: all 0.3s;
+
+      @include respond("1000") {
+        padding: 4rem 0 1.4rem 0;
+        font-size: 2rem;
+      }
+
+      @include respond(phone) {
+        min-width: 13rem;
+        text-align: center;
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 3rem;
+
+        @include respond("1000") {
+          margin-right: 5rem;
+        }
+
+        @include respond(phone) {
+          margin-right: 3rem;
+        }
+      }
+
+      &:hover {
+        border-bottom: 2px solid var(--Primary-color);
+        cursor: pointer;
+      }
+
+      &--active {
+        border-bottom: 2px solid var(--Primary-color);
+      }
+    }
+  }
+}
+
+@mixin footer {
+  .footer {
+    width: 100%;
+    position: relative;
+    padding: 5rem 2rem;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(37, 204, 247, 1),
+      rgba(59, 59, 152, 1)
+    );
+    color: #f7f7f7;
+
+    &__stuff {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include respond(phone) {
+        margin-top: 10rem;
+      }
+    }
+
+    &__logo {
+      font-size: 4rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 400;
+
+      @include respond(phone) {
+        top: 20%;
+        min-width: 40rem;
+        text-align: center;
+      }
+
+      &-logo {
+        width: 100%;
+        background-image: linear-gradient(
+          to right,
+          rgba(240, 240, 240, 1),
+          rgba(255, 255, 255, 1)
+        );
+        display: inline-block;
+        color: transparent;
+        -webkit-background-clip: text;
+
+        &::after {
+          content: "";
+          width: 2.5rem;
+          height: 2.5rem;
+          display: inline-block;
+          background-color: #f7f7f7;
+          -webkit-mask-image: url(./../svg/SVG/chevron-thin-right.svg);
+          -webkit-mask-size: cover;
+        }
+
+        &::before {
+          content: " ";
+          display: inline-block;
+          width: 2.5rem;
+          height: 2.5rem;
+          background-color: #f7f7f7;
+          -webkit-mask-image: url(./../svg/SVG/chevron-thin-left.svg);
+          -webkit-mask-size: cover;
+        }
+      }
+    }
+  }
+  .social {
+    display: flex;
+    color: #fff;
+
+    &__link:link,
+    &__link:visited,
+    &__link:active,
+    &__link:hover {
+      color: #fff;
+
+      &:not(:last-of-type) {
+        margin-right: 2rem;
+      }
+    }
+
+    &__icon {
+      width: 3rem;
+      height: 3rem;
+      fill: #fff;
+      &:not(:last-of-type) {
+        margin-right: 2rem;
+      }
+    }
+  }
+  .important__links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 30%;
+    justify-content: flex-start;
+
+    @include respond(phone) {
+      flex: 0 0 50%;
+    }
+
+    &-link {
+      padding: 1rem;
+
+      @include respond(tab-port) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  .copy {
+    display: block;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+@mixin alert {
+  .alert {
+    position: absolute;
+    top: 10%;
+    max-width: 90%;
+    left: 50%;
+    padding: 3rem 6rem;
+    border-radius: 5px;
+    color: #f7f7f7;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+    animation: alerts 1s ease-in-out;
+
+    &--success {
+      background-color: var(--Primary-color-light);
+    }
+    &--fail {
+      background-color: rgba(211, 38, 38, 0.8);
+    }
+  }
+}

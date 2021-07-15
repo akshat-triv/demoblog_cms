@@ -1,0 +1,109 @@
+Things you should know before designing your first web page | Basics of web designing
+
+Presentation of a website is extremely important. It doesn't matter how much work you've put in creating the functionality or in writing the back-end, if your website looks crummy and cheap, you won't get views, you'll not get traffic, all-in-all you won't get what you deserved. In this article we'll cover the basics of web designing.
+
+Typography
+
+Your font reflects the look and feel of your website. Right font can make a crappy looking website to classy looking. Be meticulous, these subtle things are responsible for making the user experience unforgettable.
+
+Use font size between 15 - 25 pixels
+
+Your text should be readable, it should not be too small or too large. Keep it b/w 15px - 25px, for example the font size of every paragraph in this web page lies b/w 15 to 25px.
+
+Use big fonts for headlines
+
+Go crazy on the headings. Headings are meant to attract user's focus to things you want him to read at first glance
+
+Use line spacing
+
+Line spacing obviously means space b/w two lines. Line spacing should lie b/w 120% to 150% of the font size of the paragraph. For example if the font size is 20px than the spacing should lie b/w 24px to 30px.
+
+45 to 90 characters per line
+
+Have you never noticed, in a professional or a well designed web site the lines are never longer than 90 characters and the reason of doing that is, we don't want our user to strain his eyes trying to read our text. If the lines will start from one corner of the screen and end on the other corner than just imagine how tiring it'll become just after few lines.
+
+Use good fonts
+
+By good fonts I mean good font family. 'Lato' and 'Open Sans' are some of my favourite fonts offered by google fonts. I would recommend you to use google fonts because the default fonts are not smooth at all. I repeat{ never use default font family. }
+
+Colors
+
+Use flat UI colors. Just make a google search for flat UI color palettes and you'll get number of websites, offering code of colors you can use in your website. Flat colors look really good over websites and the reason is because they are solid, uninterrupted and have uniform stroke, depth and shading.
+
+One base color
+
+Choose one base color or you can also call it your theme color, and maintain it through out your website. Like you see on this website, blue is my base color.
+
+Use color to draw attention
+
+For example use colors on buttons, links or in the background of some featuring section to draw attention towards it.
+
+Never use black
+
+You can use a dark shade of grey if you want or a dark shade of blue, but never use black. I don't know why, maybe it's psychological that pure black color looks really bad on website.
+
+Choose color wisely
+
+Different colors convey different messages. So you should choose the color according to the type of your website. There is a reason why most banking websites use color blue because blue represents trust and integrity.
+
+Red is a great color to use when power, passion, strength and excitement want to be transmitted. Brighter tones are more energetic and darker shades are more powerful and elegant.
+
+Orange draws attention without being as overpowering as red. It means cheerfulness and creativity. Orange can be associated with friendliness, confidence, and courage.
+
+Yellow is energetic and gives the feeling of happiness and liveliness. Also, it associates with curiosity, intelligence, brightness, etc.
+
+Green is the color of harmony, nature, life and health. Also, it is often associated with money. In design, green can have a balancing and harmonizing effect.
+
+Blue means patience, peace, trustworthiness, and stability. It is one of the most beloved colors, especially by men. It is associated with professionalism, trust and honor. That's actually why the biggest social networks use blue.
+
+Purple is traditionally associated with power, nobility and wealth. In your design, purple can give a sense of wisdom, royalty, nobility, luxury, and mystery.
+
+Pink expresses romance, passivity, care, peace, affection, etc.
+
+Brown is the color of relaxation and confidence. Brown means earthiness, nature, durability, comfort, and reliability.
+
+Working with Images
+
+Put text directly on the image
+
+You can overlay the image with some text on it. We can use absolute positioning for the image or use the image as a background, using CSS.
+
+Put your text in a box
+
+You can put your text in a transparent shape and then put it over the image, it looks really cool.
+
+Overlay the image
+
+Now this is similar to putting text over image, but the change now is that, a transparent layer is covering the whole image.
+
+Blur the image
+
+We can use the CSS filter property on a 'img' element and set it to blur, to create this beautiful effect. 
+
+The floor fade
+
+Now this one is my favourite. You can use linear-gradient property and overlay the image with a color, which starts transparent and then gets denser at the end.
+
+Working with Icons
+
+Use icons wherever it's possible. Icons add a premium look to a website. Use icons for listing features, showing some action, in links, on buttons etc. 
+
+Ionicons and icomoon are two platforms from where you can get icons for your website for free.
+
+Icon font V/S SVG
+
+Learn about SVG and using them in HTML because icon fonts are not reliable, it's better to use SVG (Scalable Vector Graphic) rather than icon fonts because for icon fonts we have to rely on 3rd party websites and their servers and a lot of times, they don't show up, they're problematic, loading speed is very slow. So always try to use SVG and they are easy to use, they get rendered faster than icon fonts. Just visit icomoon and select a style, select the icons you want, download them and then use them in your website.
+
+Spacing and layout
+
+Always try make a clean and simple layout.
+
+Using whitespace
+
+You must have seen that how elegantly whitespace is used to create the flow of a website. Put whitespace in b/w your elements, use it in b/w your groups of elements, b/w sections of your website. Establish a flow that corresponds to your content's message and use whitespace to build that flow.
+
+Keep it simple
+
+Keep things as simple and as natural as possible. That's the secret for creating a beautiful website, don't go overboard with animations, gradients and colors. Simplicity is what makes a website look good. I'm not saying make it boring, I'm saying keep things subtle.
+
+That's it for this article. Thanks for reading it, see you next time.

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post the article</title>
+    <link rel="stylesheet" href="/css/Poststyle.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="loading"></div>
+        <h3 class="header__icon">
+            akshat trivedi
+        </h3>
+        <form action="#" class="search">
+            <input type="text" class="search__bar" placeholder="search..">
+            <button class="search__button">
+                <svg class="search__icon">
+                    <use xlink:href="./svg/sprite.svg#icon-magnifying-glass"></use>
+                </svg>
+            </button>
+        </form>
+        <div class="navigation">
+            <a href="#" class="navigation__item navigation__item--active">Home</a>
+            <a href="#" class="navigation__item">HTML & CSS</a>
+            <a href="#" class="navigation__item">JavaScript</a>
+            <a href="#" class="navigation__item">Node js</a>
+            <a href="#" class="navigation__item">MongoDB</a>
+        </div>
+    </header>
+    <main>
+        <div class="cms">
+            <div class="btns">
+                <button class='btn' id="save">Save</button>
+                <input type="number" style="margin-right:1rem;" name="count" id="count" placeholder="count">
+                <button class="btn" id="set">set</button>
+                <button class='btn' id="clear">Clear</button>
+                <button class="btn" id='post'>Post</button>
+            </div>
+
+            <form action="#" class="article">
+                <input type="text" class="fields" id="title" placeholder="Title" required>
+                <select name="category" id="category" class="selects">
+                    <option value="html&css" selected>HTML & CSS</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="nodejs">Node js</option>
+                    <option value="mongodb">MongoDB</option>
+                </select>
+                <textarea name="introduction" id="introduction" class="fields__area"
+                    placeholder="Introduction"></textarea>
+                <input type="file" name="coverImage" id="coverImage" class='js--file'>
+                <label for="coverImage" class="files">Upload coverImage</label>
+                <select name="design" id="design" class="selects">
+                    <option value="1" selected>Design 1</option>
+                    <option value="2">Design 2</option>
+                </select>
+                <div class="btns" id="content">
+                    <button class='btn' id="heading">Heading</button>
+                    <button class="btn" id='subHeading'>Sub heading</button>
+                    <button class='btn' id="paragraph">Paragraph</button>
+                    <button class="btn" id='image'>Image</button>
+                    <button class="btn" id='code'>Code</button>
+                </div>
+            </form>
+        </div>
+        <div class="preview">
+            <h1 id="viewtitle">Title</h1>
+            <p class="paragraph" id="viewintroduction">Placeholder introduction</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__logo">
+            <div class="footer__logo-logo">akshat trivedi</div>
+            <span class="copy">All &copy; rights reserved</span>
+        </div>
+        <div class="footer__stuff">
+            <ul class="important__links">
+                <li class="important__links-link"><a href="#">Home</a></li>
+                <li class="important__links-link"><a href="#">HTML & CSS</li>
+                <li class="important__links-link"><a href="#">JavaScript</a></li>
+                <li class="important__links-link"><a href="#">Node Js</a></li>
+                <li class="important__links-link"><a href="#">MongoDB</a></li>
+            </ul>
+            <div class="social">
+                <a href="#" class="social__link">
+                    <svg class="social__icon">
+                        <use xlink:href="./svg/sprite.svg#icon-facebook-with-circle"></use>
+                    </svg>
+                </a>
+                <a href="#" class="social__link">
+                    <svg class="social__icon">
+                        <use xlink:href="./svg/sprite.svg#icon-linkedin-with-circle"></use>
+                    </svg>
+                </a>
+                <a href="#" class="social__link">
+                    <svg class="social__icon">
+                        <use xlink:href="./svg/sprite.svg#icon-twitter-with-circle"></use>
+                    </svg>
+                </a>
+                <a href="#" class="social__link">
+                    <svg class="social__icon">
+                        <use xlink:href="./svg/sprite.svg#icon-instagram-with-circle"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/js/Postbundle.js"></script>
+</body>
+
+</html>
